@@ -1,5 +1,5 @@
 from pathlib import Path
-from gmdkit.extra.globed import GlobedScript
+from gmdkit.extra.globed import GlobedScript, PREFIX
 from gmdkit.models.object import ObjectList
 from gmdkit.mappings import prop_id
 
@@ -12,8 +12,8 @@ y = 15
 for file in folder.glob("*.lua"):
   script = GlobedScript()
   script.import_script(file)
-  script.prefix = file.stem
-  
+  script.prefix = f"{PREFIX}:{str(file.stem).upper()}"
+  script.save()
   script.object[prop_id.y] = y = y-30
   object_list.append(script.object)
 
