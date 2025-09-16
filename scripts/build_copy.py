@@ -18,3 +18,4 @@ for file in folder.glob("*.lua"):
   object_list.append(script.object)
 
 object_list.to_file("object_string.txt", encoded=False)
+print(object_list.to_string())
