@@ -17,5 +17,5 @@ for file in folder.glob("*.lua"):
   script.object[prop_id.y] = y = y-30
   object_list.append(script.object)
 
-object_list.to_file("object_string.txt", encoded=False)
+object_list.to_file("data/object_string.txt", encoded=False)
 print(object_list.to_string())
