@@ -10,10 +10,11 @@ object_list = ObjectList()
 y = 15
 
 for file in folder.glob("*.lua"):
-  script_object = GlobedScript()
-  script_object.import_script(file)
-  script_object.prefix = file.stem
-  script_object[prop_id.y] = y = y-30
-  obj_list.append(script_object)
+  script = GlobedScript()
+  script.import_script(file)
+  script.prefix = file.stem
+  
+  script.object[prop_id.y] = y = y-30
+  obj_list.append(script.object)
 
 object_list.to_file("object_string.txt", encoded=False)
