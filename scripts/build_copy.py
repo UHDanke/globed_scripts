@@ -10,6 +10,7 @@ object_list = ObjectList()
 y = 15
 
 for file in folder.glob("*.lua"):
+  if file.name == "globed.lua": continue
   script = GlobedScript()
   script.import_script(file)
   script.prefix = f"{PREFIX}:{str(file.stem).upper()}"
