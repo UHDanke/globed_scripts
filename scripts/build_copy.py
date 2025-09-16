@@ -3,7 +3,7 @@ from gmdkit.extra.globed import GlobedScript
 from gmdkit.models.object import ObjectList
 from gmdkit.mappings import prop_id
 
-folder = Path("lua_scripts")
+folder = Path("lua")
 
 object_list = ObjectList()
 
