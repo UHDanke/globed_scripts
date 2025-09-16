@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - lua_scripts/**
+      - lua/**
 
 jobs:
   run-script:
