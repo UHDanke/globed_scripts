@@ -4,7 +4,7 @@ local globed = {}
 ---@class globed.SpawnInfo
 local SpawnInfo = {}
 
----Creates a new SpawnInfo object for spawning a group of entities.
+---Creates a new SpawnInfo object used by globed.spawn and globed.spawn_for_all
 ---@param group_id number The ID of the group to spawn
 ---@param delay number The base delay before spawning
 ---@param delay_variance number Random variance added/subtracted from the delay
@@ -15,7 +15,7 @@ function SpawnInfo.new(group_id, delay, delay_variance, ordered, remaps) end
 
 globed.SpawnInfo = SpawnInfo
 
----Sets a callback for an event
+---Sets a callback for a client event
 ---@param id number
 ---@param func fun()
 function globed.set_callback(id, func) end
